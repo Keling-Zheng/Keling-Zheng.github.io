@@ -23,19 +23,19 @@ repository               : "academicpages/academicpages.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
-  name             : "Your Sidebar Name"
+  avatar           : "profile_kz.jpg"
+  name             : "Keling Zheng"
   pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
-  location         : "Earth"
-  employer         : "Red Brick University"
-  uri              : # URL
-  email            : "none@example.org" 
+  bio              : "Assistant Professor of Finance"
+  location         : "Hong Kong"
+  employer         : "The Chinese University of Hong Kong"
+  uri              : 
+  email            : "keling.zheng@cuhk.edu.hk" 
 
   # Academic websites
-  academia         : # URL
+  academia         : "https://www.bschool.cuhk.edu.hk/staff/zheng-keling/"
   arxiv            : # URL - Update with the correct link to your profile
-  googlescholar    : "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
+  googlescholar    : "https://scholar.google.com/citations?user=2_-RyjwAAAAJ&hl=en"
   inspire-hep      : # URL
   impactstory      : # URL
   orcid            : "https://orcid.org/yourorcidurl"
