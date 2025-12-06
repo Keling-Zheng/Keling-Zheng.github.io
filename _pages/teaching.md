@@ -1,6 +1,7 @@
 ---
 permalink: /teaching/
 title: "Teaching"
+author_profile: true
 ---
 
 ### The Chinese University of Hong Kong
