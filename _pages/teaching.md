@@ -9,7 +9,7 @@ author_profile: true
 ### The Chinese University of Hong Kong
 1. FINA 3070: **Corporate Finance**, Instructor, Fall 2025
 ---
-### University of British Columbia
+### The University of British Columbia
 1. COMM 374: **Applied Financial Markets**, Instructor, Spring 2021
 
 1. BAFI 523: **FinTech**, Teaching Assistant, 2023
