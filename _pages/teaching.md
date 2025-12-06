@@ -1,8 +1,6 @@
 ---
-layout: page
 permalink: /teaching/
-title: Teaching
-description:
+title: "Teaching"
 ---
 
 ### The Chinese University of Hong Kong
