@@ -5,6 +5,7 @@ title: "Teaching"
 author_profile: true
 ---
 
+---
 ### The Chinese University of Hong Kong
 1. FINA 3070: **Corporate Finance**, Instructor, Fall 2025
 ---
