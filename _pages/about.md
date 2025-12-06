@@ -13,8 +13,8 @@ I obtained my Ph.D. from the University of British Columbia, Sauder School of Bu
 
 My research interests include financial intermediation, household finance, and real estate.
 
-Curriculum Vitae: [CV](https://drive.google.com/uc?export=download&id=1nAYgWoFFgd-xCEFaHrUpxyQzzL9FnGnj) 
-Email: keling.zheng@cuhk.edu.hk
+* Curriculum Vitae: [CV](url: /files/CV_KelingZheng.pdf) 
+* Email: keling.zheng@cuhk.edu.hk
 
 Updates
 ======
