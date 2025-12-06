@@ -12,7 +12,7 @@ main:
     url: /home/
     
   - title: "CV"
-    url: /cv/
+    url: /files/CV_KelingZheng.pdf
     
   - title: "Research"
     url: /publications/
