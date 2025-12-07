@@ -14,21 +14,20 @@ author_profile: true
       --abstract-content-gray: #f1f1f1;
     }
 
-    .working-papers-box {
-      background-color: #f5f7fa;   /* light grey-blue box */
-      padding: 25px;
-      border-radius: 8px;          /* slightly rounded corners */
-      border: 1px solid #dce2e9;   /* subtle border */
-      margin-bottom: 30px;
-    }
+   .working-papers-header {
+     background-color: #f5f7fa;   /* light gray-blue */
+     padding: 15px 20px;
+     border-radius: 8px;
+     border: 1px solid #dce2e9;
+     margin-bottom: 20px;
+     display: inline-block;        /* so it only wraps the text */
+   }
 
-    .working-papers-title {
-      font-size: 28px;             /* larger text size */
-      font-weight: 700;            /* bold */
-      margin-top: 0;
-      margin-bottom: 20px;
-    }
-    
+   .working-papers-header h2 {
+     font-size: 28px;
+     margin: 0;
+     font-weight: 700;
+   }
     .abstract-button {
       display: inline-flex;
       align-items: center;
@@ -70,8 +69,9 @@ author_profile: true
   
 <!-----------------------------------------------------------CONTENT---------------------------------------------------------------->
 
-<div class="working-papers-box">
-  <h2 class="working-papers-title">Working Papers</h2>
+<div class="working-papers-header">
+  <h2>Working Papers</h2>
+</div>
 
 <p>
   <a style="font-size: 1.2em; text-decoration:underline; color:rgb(12, 35, 68); font-weight:bold" href="http://keling-zheng.github.io/files/papers/aggregation.pdf">Mortgage Aggregation and Credit Supply</a>
