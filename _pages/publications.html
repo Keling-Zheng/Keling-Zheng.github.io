@@ -1,30 +1,224 @@
 ---
 layout: archive
-title: "Research"
-permalink: /publications/
+permalink: /research/
+title: ""
 author_profile: true
 ---
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
 
 
+<!-----------------------------------------------------------STYLES---------------------------------------------------------------->
+<style>
+    :root {
+      --abstract-button-gray: #f8f8f8;
+      --abstract-content-gray: #f1f1f1;
+    }
+    
+    .abstract-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2px .5px;
+      margin: 0;
+      border: none;
+      background-color: var(--abstract-button-gray);
+      cursor: pointer;
+      font-size: 16px;
+      font-family: Roboto Slab, serif;
+      color:black;
+    }
+    
+    .abstract-button::before {
+      content: '[+]\00a0';
+      color: hsl(0, 0%, 50%);
+    }
+    
+    .abstract-button.active::before {
+      content: '[\2212]\00a0'
+    }
+    
+    .abstract-content {
+      width: 100%; /* Change this value to change the width of the content box */
+      background-color: var(--abstract-content-gray);
+      padding: 10px;
+      display: none;
+      font-size: 16px;
+      font-family: Roboto Slab, serif;
+    }
+    
+    .abstract-content.show {
+      display: block;
+    }
+</style>
+  
 
+  
+<!-----------------------------------------------------------CONTENT---------------------------------------------------------------->
+
+<h2 id="working-papers">Working Papers</h2>
+
+<p>
+  <a style="text-decoration:none; color:rgb(177, 119, 48); font-weight:bold" href="http://timhdesilva.github.io/files/papers/fat_tails.pdf">Expectation Formation with Fat-Tailed Processes: Evidence and Theory</a>
+  <br>with Eugene Larsen-Hallock, Adam Rej, </a> and <a style="text-decoration:none; color:gray" href="https://sites.google.com/site/dthesmar/">David Thesmar</a>
+  <br>
+    <button class="abstract-button" data-target="fat_tails" style="margin-top:8px; margin-right: 10px;">Abstract</button>
+</p>
+<div id="fat_tails" class="abstract-content">
+  Using a large sample of firm sales growth expectations, we document three facts: (i) the relationship between forecast revisions and future forecast errors is strongly non-linear, (ii) the distribution of sales growth has fat tails, and (iii) extreme values of sales growth mean-revert. We formally show that these three facts are consistent with a model in which the underlying process is non-Gaussian, but forecasters fail to recognize this. This model can quantitatively explain our three facts and is consistent with evidence from an online forecasting experiment, as well as the non-linearity in the momentum of stock returns.
+</div>
+
+<p>
+    <a style="text-decoration:none; color:rgb(177, 119, 48); font-weight:bold" href="http://timhdesilva.github.io/files/papers/si.pdf">Selective Inattention to Interest Rates</a>
+    <br>with <a style="text-decoration:none; color:gray" href="https://www.pierfrancescomei.com/">Pierfrancesco Mei</a>
+    <br>
+      <button class="abstract-button" data-target="si" style="margin-top:8px">Abstract</button>
+</p>
+<div id="si" class="abstract-content">
+  Using existing and newly designed household surveys, we show that households close to durable purchases acquire more information about interest rates and have more accurate, less dispersed, and less uncertain interest rate expectations. We use this evidence of selective inattention to calibrate an incomplete markets model with durable consumption and endogenous information acquisition about interest rates. Relative to exogenous inattention, selective inattention shifts the composition of aggregate consumption responses to interest rate cuts toward durables, accelerates the impact of larger rate cuts, and generates dampened responses to changes in rate volatility that are closer to empirical evidence.
+</div>
+
+<p>
+    <a style="text-decoration:none; color:rgb(177, 119, 48); font-weight:bold" href="http://timhdesilva.github.io/files/papers/llm_advice.pdf">How Good is Generative AI Personal Financial Advice?</a>
+    <br>with <a style="text-decoration:none; color:gray" href="https://tahachoukhmane.com/">Taha Choukhmane</a>, <a style="text-decoration:none; color:gray" href="https://mitsloan.mit.edu/programs/phd/weidong-weldon-lin">Weidong Lin</a>, and <a style="text-decoration:none; color:gray" href="https://www.linkedin.com/in/matthew-akuzawa-4182a21ba">Matthew Akuzawa</a>
+    <br>
+      <button class="abstract-button" data-target="llm_advice" style="margin-top:8px">Abstract</button>
+</p>
+<div id="llm_advice" class="abstract-content">
+  How does AI-generated personal financial advice from Large Language Models (LLMs) compare to economists' normative models? We develop and implement a method to evaluate generative AI financial advice by simulating thousands of life cycle paths for consumption, saving, and portfolio choices under realistic income, employment, and asset return scenarios. Our approach compares these LLM-generated paths against optimal choices from a standard life cycle model and can parsimoniously summarize LLM advice across prompts and models by estimating structural time and risk preferences. Applying our method to OpenAI's GPT-5 mini, we find that the advice qualitatively aligns with standard life cycle theory but deviates systematically in four key ways: (i) recommended consumption and saving paths imply unrealistically high patience, with estimated intertemporal discount factors well above one; (ii) recommended choices often reflect simple heuristics, such as round savings rates, fixed-percentage withdrawal rules in retirement, and common asset allocation rules-of-thumb; (iii) LLM recommendations exhibit substantially more inertia in portfolio rebalancing and moderately less consumption-smoothing in unemployment than our normative benchmark; and (iv) holding all else constant, recommendations vary systematically with demographics (e.g., recommending lower equity shares for women) and between repeated identical queries.
+</div>
+
+<p>
+  <a style="text-decoration:none; color:rgb(177, 119, 48); font-weight:bold" href="http://timhdesilva.github.io/files/papers/agnostic_dp.pdf">Model-Agnostic Dynamic Programming</a>
+  <br>with <a style="text-decoration:none; color:gray" href="https://economics.mit.edu/people/phd-students/marc-de-la-barrera-i-bardalet">Marc de la Barrera</a>
+  <br>
+    <button class="abstract-button" data-target="agnostic_dp" style="margin-top:8px; margin-right: 10px;">Abstract</button>
+    <a style="text-decoration:none; background-color:#f8f8f8; font-size: 16px; font-family: Roboto Slab, serif;" href="https://pypi.org/project/nndp/"><span style="color: gray;">[+]</span> <span style="color:black;">Python Package</span></a>
+</p>
+<div id="agnostic_dp" class="abstract-content">
+  Traditional dynamic programming requires a mathematical model of the transition function for the state vector. Leveraging reinforcement learning techniques, we develop a framework to solve dynamic optimization problems that does not require modeling the data-generating process (DGP) of exogenous states. Instead, the method samples realizations of these states directly from the data, allowing the modeler to be "agnostic" about the DGP. We apply our method to a canonical life cycle consumption-saving problem, solving the model without specifying the DGP for income. Using income data from the CPS, we find that the welfare loss from using a standard parametric income process relative to placing no restrictions on the DGP is small. We conclude by verifying that our method achieves a global optimum when given a known DGP and discussing directions for future work.
+</div>
+
+<h2 id="publications">Peer-Reviewed Publications</h2>
+
+<p>
+  <a style="text-decoration:none; color:rgb(177, 119, 48); font-weight:bold" href="http://timhdesilva.github.io/files/papers/preferences_frictions.pdf">What Drives Investors&#39; Portfolio Choices? Separating Risk Preferences from Frictions</a> 
+  <br>with <a style="text-decoration:none; color:gray" href="https://tahachoukhmane.com/">Taha Choukhmane</a>
+  <br><strong>Journal of Finance</strong>, Forthcoming
+  <br><button class="abstract-button" data-target="pref_fric" style="margin-top:8px; margin-right:10px">Abstract</button>
+  <a style="text-decoration:none; background-color:#f8f8f8; font-size: 16px; font-family: Roboto Slab, serif;" href="https://twitter.com/timdesilva/status/1797283088885498071"><span style="color: gray;">[+]</span> <span style="color:black;">Summary</span></a>
+  <ul style="margin-top: -12px">
+    <li>Media Coverage: <a style="text-decoration:none; color:gray" href="https://cepr.org/voxeu/columns/drivers-investors-portfolio-choices-separating-risk-preferences-frictions">VoxEU</a></li>
+  </ul>
+</p>
+<div id="pref_fric" class="abstract-content">
+We study the role of risk preferences and frictions in portfolio choice using variation in 401(k) default options. Patterns of active choice in response to different default funds imply that, absent participation frictions, 94% of investors prefer holding stocks, with an equity share of retirement wealth declining with age---patterns markedly different from observed allocations. We use this quasi-experiment to estimate a life-cycle model and find a relative risk aversion of 2.5, EIS of 0.25, and $160 portfolio adjustment cost. The results suggest that low levels of stock market participation in retirement accounts are due to participation frictions rather than nonstandard preferences such as loss aversion.
+</div>
+
+<p>
+    <a style="text-decoration:none; color:rgb(177, 119, 48); font-weight:bold" href="http://timhdesilva.github.io/files/papers/losing_optional.pdf">Losing is Optional: Retail Option Trading and Expected Announcement Volatility</a>
+    <br>with <a style="text-decoration:none; color:gray" href="https://mitmgmtfaculty.mit.edu/eso/">Eric C. So</a> and <a style="text-decoration:none; color:gray" href="https://ksmith142.github.io/">Kevin C. Smith</a>
+    <br><strong>Review of Finance</strong>, Accepted
+    <br>
+      <button class="abstract-button" data-target="losing" style="margin-top: 8px; margin-right: 10px;">Abstract</button>
+      <a style="text-decoration:none; background-color:#f8f8f8; font-size: 16px; font-family: Roboto Slab, serif;" href="http://timhdesilva.github.io/files/papers/losing_optional_appendix.pdf"><span style="color: gray;">[+]</span> <span style="color:black;">Appendix</span></a>
+    <ul style="margin-top: -12px">
+      <li>Media Coverage: <a style="text-decoration:none; color:gray" href="https://mitsloan.mit.edu/ideas-made-to-matter/retail-investors-lose-big-options-markets-research-shows">Ideas Made to Matter</a>, <a style="text-decoration:none; color:gray" href="https://www.tradersmagazine.com/am/what-motivates-retail-options-traders/">Traders Magazine</a>, <a style="text-decoration:none; color:gray" href="https://www.risk.net/investing/7954462/its-amateur-hour-how-retail-traders-upended-options-market">Risk.net</a>, <a style="text-decoration:none; color:gray" href="https://www.advisorperspectives.com/articles/2023/02/19/the-wealth-destroying-behavior-of-retail-option-trading">Advisor Perspectives</a></li>
+    </ul>
+</p>
+<div id="losing" class="abstract-content">
+  We document the growth of retail options trading and provide evidence that retail investors are drawn to options by anticipated spikes in volatility. Retail investors purchase options in a concentrated fashion before earnings announcements, particularly those with greater expected abnormal volatility. Comparing across asset markets, we also find retail investors disproportionately trade options over stocks as anticipated announcement volatility increases. In doing so, retail investors display a trio of wealth-depleting behaviors: they overpay for options relative to realized volatility, incur enormous bid-ask spreads, and do not close their positions until weeks after announcements. These translate to retail losses of 5-to-9% on average, and 10-to-14% for high expected volatility announcements. 
+</div>
+
+<p>
+  <a style="text-decoration:none; color:rgb(177, 119, 48); font-weight:bold" href="http://timhdesilva.github.io/files/papers/jmp_deSilva.pdf">Insurance versus Moral Hazard in Income-Contingent Student Loan Repayment</a>
+  <br><strong>The Quarterly Journal of Economics</strong>, 2025
+  <br>
+    <button class="abstract-button" data-target="jmp" style="margin-top:8px; margin-right:10px;">Abstract</button>
+    <a style="text-decoration:none; background-color:#f8f8f8; font-size: 16px; font-family: Roboto Slab, serif; margin-right: 10px;" href="https://x.com/timdesilva/status/1728472810203279590?s=20"><span style="color: gray;">[+]</span> <span style="color:black;">Summary</span></a>
+  <ul style="margin-top: -12px">
+    <li>Awards: Winner of <a style="text-decoration:none; color:gray" href="https://www.blackrock.com/corporate/applied-research-award">BlackRock Applied Research Award</a>, <a style="text-decoration:none; color:gray" href="https://www.hec.edu/en/faculty-research/events/top-finance-graduate-award-hec-paris-0">Top Finance Graduate Award</a>, <a style="text-decoration:none; color:gray" href="https://fraconference.com/previous-programs/">FRA Best Paper Award</a>, <a style="text-decoration:none; color:gray" href="https://fraconference.com/previous-programs/">Michael J. Barclay Young Scholar Award</a>, <a style="text-decoration:none; color:gray" href="https://westernfinance.org/conference-2024/">Brattle Group PhD Candidate Award</a>, <a style="text-decoration:none; color:gray" href="https://westernfinance.org/conference-2024/">USC Marshall School of
+      Business Trefftzs Award for Best Student Paper</a></li>
+    <li>Media Coverage: <a style="text-decoration:none; color:gray" href="https://www.gsb.stanford.edu/insights/what-if-student-loan-payments-were-tied-your-paycheck">GSB Insights</a></li>
+  </ul>
+</p>
+<div id="jmp" class="abstract-content">
+  Student loans with income-contingent repayment insure borrowers against income risk but can reduce their incentives to earn more. Using a change in Australia's income-contingent repayment schedule, I show that borrowers reduce their labor supply to lower their repayments. These responses are larger among borrowers with more hourly flexibility, a lower probability of repayment, and tighter liquidity constraints. I use these responses to estimate a dynamic model of labor supply with frictions that generate imperfect adjustment. My estimates imply that the labor supply responses to income-contingent repayment limit the optimal amount of insurance in government-provided student loans. However, these responses are too small to justify fixed repayment contracts: restructuring existing student loans from fixed repayment to a constrained-optimal income-contingent loan---while keeping the tax and transfer system unchanged---increases borrower welfare by the equivalent of a 0.8% increase in lifetime consumption at no additional fiscal cost.
+</div>
+
+<p>
+    <a style="text-decoration:none; color:rgb(177, 119, 48); font-weight:bold" href="http://timhdesilva.github.io/files/papers/noise_expectations.pdf">Noise in Expectations: Evidence from Analyst Forecasts</a>
+    <br>with <a style="text-decoration:none; color:gray" href="https://sites.google.com/site/dthesmar/">David Thesmar</a>
+    <br><strong>Review of Financial Studies</strong>, 2024
+    <br>
+      <button class="abstract-button" data-target="noise" style="margin-top: -20px; margin-right: 10px; margin-top:8px;">Abstract</button>
+      <a style="text-decoration:none; background-color:#f8f8f8; font-size: 16px; font-family: Roboto Slab, serif; margin-right: 10px; margin-top:8px;" href="http://timhdesilva.github.io/files/papers/noise_expectations_appendix.pdf"><span style="color: gray;">[+]</span> <span style="color:black;">Appendix</span></a>
+      <a style="text-decoration:none; background-color:#f8f8f8; font-size: 16px; font-family: Roboto Slab, serif; margin-right: 10px; margin-top:8px;" href="https://github.com/timhdesilva/noise_expectations"><span style="color: gray;">[+]</span> <span style="color:black;">Code</span></a>
+      <a style="text-decoration:none; background-color:#f8f8f8; font-size: 16px; font-family: Roboto Slab, serif; margin-top:8px;" href="https://x.com/timdesilva/status/1733321704167100490?s=20"><span style="color: gray;">[+]</span> <span style="color:black;">Summary</span></a>
+    <ul style="margin-top: -12px">
+      <li>Awards: <a style="text-decoration:none; color:gray" href="https://sfs.org/review-of-financial-studies/awards/michael-j-brennan-best-paper-award/">Michael J. Brennan Best Paper Award</a> (Runner-Up) </li>
+      <li>Media Coverage: <a style="text-decoration:none; color:gray" href="https://betterworld.mit.edu/spectrum/issues/2023-fall/mits-sloans-david-thesmar-encourages-intellectual-drive/">MIT Spectrum</a></li>
+    </ul>
+</p>
+<div id="noise" class="abstract-content">
+  Analyst forecasts outperform econometric forecasts in the short run but underperform in the long run. We decompose these differences in forecasting accuracy into analysts’ information advantage, forecast bias, and forecast noise. We find that noise and bias strongly increase with forecast horizon, while analysts’ information advantage decays rapidly. A noise increase with horizon generates a mechanical reversal in the sign of the error-revision (Coibion--Gorodnichenko) regression coefficient at longer horizons, independently of over/underreaction. A parsimonious model with bounded rationality and a noisy cognitive default matches the term structures of noise and bias jointly.
+</div>
+
+<!-- <h2 id="work-in-progress">Work in Progress</h2>
+
+<p>
+    <strong>Selective Inattention to Interest Rates</strong>
+    <br>with <a style="text-decoration:none; color:gray" href="https://www.pierfrancescomei.com/">Pierfrancesco Mei</a>
+    <br><button class="abstract-button" data-target="inattention" style="margin-top:8px">Abstract</button>
+</p>
+<div id="inattention" class="abstract-content">
+  This paper studies whether households select into paying attention to interest rates when making durable goods purchases and examines its macroeconomic implications. Using existing and new surveys, we show that households close to durables purchases have more accurate, less dispersed, and less uncertain interest rate expectations, and more actively acquire information about the current values of decision-relevant rates. We then build a partial equilibrium incomplete markets model with durable consumption and dynamic information acquisition about interest rates. We calibrate the model using our survey evidence and show how selective inattention, through creating a tight link between durables adjustments and beliefs, generates impulse responses to both the level and volatility of interest rates that differ significantly from models with rational expectations and exogenous inattention.
+</div> -->
+
+<h2 id="publications">Other Publications</h2>
+
+<p>
+    <a style="text-decoration:none; color:rgb(177, 119, 48); font-weight:bold" href="http://timhdesilva.github.io/files/papers/trp_white_paper.pdf">Age, Evolving Allocation Preferences, and the Case for Personalized Solutions</a>
+    <br>with Sudipto Banerjee, Louisa Schafer, and <a style="text-decoration:none; color:gray" href="https://tahachoukhmane.com/">Taha Choukhmane</a>
+    <br><strong>T. Rowe Price Research Paper </strong>, 2025
+    <br>
+    <ul style="margin-top: -12px">
+      <li>Media Coverage: <a style="text-decoration:none; color:gray" href="https://troweprice.gcs-web.com/news-releases/news-release-details/new-study-reveals-how-retirement-savers-investment-preferences">T. Rowe Price</a></li>
+    </ul>
+</p>
+
+<p>
+    <a style="text-decoration:none; color:rgb(177, 119, 48); font-weight:bold" href="https://digitalcommons.iwu.edu/uer/vol14/iss1/8/">Are Volatility Expectations in Different Countries Interdependent?</a>
+    <br><strong>Undergraduate Economic Review</strong>, 2017
+    <br><button class="abstract-button" data-target="vol" style="margin-top:8px">Abstract</button>
+    <ul style="margin-top: -12px">
+        <li>Winner of <em>Best Senior Thesis in Financial Economics</em> at Claremont McKenna College</li>
+    </ul>
+</p>
+<div id="vol" class="abstract-content">
+  Over the past couple of decades, the number of volatility indices has increased rapidly. Although the dynamics of realized volatility spillover have been studied extensively, very few studies exist that examine the spillover between these implied volatility indices. By using DAG-based structural vector autoregression, this paper provides evidence that implied volatility spillover differs from realized volatility spillover. This paper finds that Asia, more specifically Hong Kong, plays a central role in implied volatility spillover during and after the 2008 financial crisis.
+</div>
+
+<p>
+    <a style="text-decoration:none; color:rgb(177, 119, 48); font-weight:bold" href="https://digitalcommons.iwu.edu/uer/vol13/iss1/13/">Is Google Search Behavior Related to Volatility?</a>
+    <br><strong>Undergraduate Economic Review</strong>, 2016
+    <br><button class="abstract-button" data-target="google" style="margin-top:8px">Abstract</button>
+</p>
+<div id="google" class="abstract-content">
+  Intuitively, one would expect that internet search volume would contain valuable information about investor sentiment for a company. With the development of new data sources, such as Google Trends, this relationship can be more easily and objectively examined. This paper seeks to examine the relationship between a company’s stock price volatility and its Google search volume. A small cross-section of twenty companies is considered, and the goal of this paper is to demonstrate the power of Google Trends data in hope of initiating further research. Using a conventional GARCH framework for financial market volatility, an economically and statistically significant contemporaneous relationship between Google search volume and equity volatility is found.
+</div>
+
+
+<!-----------------------------------------------------------SCRIPTS---------------------------------------------------------------->
+<script>
+    const abstractButtons = document.querySelectorAll('.abstract-button');
+    
+    abstractButtons.forEach((abstractButton) => {
+      abstractButton.addEventListener('click', (event) => {
+        const button = event.target;
+        button.classList.toggle('active');
+        const abstractContentId = button.dataset.target;
+        const abstractContent = document.getElementById(abstractContentId);
+        abstractContent.classList.toggle('show');
+      })
+    });
+</script>
